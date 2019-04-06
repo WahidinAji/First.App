@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App1.View"
+       FlyoutBehavior="Disabled"
+             x:Class="App1.MainPage">
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Color x:Key="NavigationPrimary">#00FF00</Color> <!--warna bar-->
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.ShellBackgroundColor" Value="{StaticResource NavigationPrimary}" />
+                <Setter Property="Shell.ShellForegroundColor" Value="White" />
+                <Setter Property="Shell.ShellTitleColor" Value="Black" /> <!--Warna tulisan pada bar atas-->
+                <Setter Property="Shell.ShellDisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.ShellUnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.ShellTabBarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
+                <Setter Property="Shell.ShellTabBarForegroundColor" Value="White"/>
+                <Setter Property="Shell.ShellTabBarUnselectedColor" Value="#964B00"/><!--Warna icon bar bottom-->
+                <Setter Property="Shell.ShellTabBarTitleColor" Value="Black"/> <!--Warna icon bar bottom pada saat dipilih-->
+            </Style>
+            <Style TargetType="ShellItem" BasedOn="{StaticResource BaseStyle}" />
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <ShellItem>
+        <ShellSection Title="Home" Icon="Home.png">
+            <ShellContent ContentTemplate="{DataTemplate local:HomePage}" />
+        </ShellSection>
+        <ShellSection Title="Statistic" Icon="Statistic.png">
+            <ShellContent ContentTemplate="{DataTemplate local:StatisticPage}" />
+        </ShellSection>
+        <ShellSection Title="Plan" Icon="Plan.png">
+            <ShellContent ContentTemplate="{DataTemplate local:PlanPage}" />
+        </ShellSection>
+        <ShellSection Title="Account" Icon="Account.png">
+            <ShellContent ContentTemplate="{DataTemplate local:AccountPage}" />
+        </ShellSection>
+    </ShellItem>
+
+    
+
+</Shell>
