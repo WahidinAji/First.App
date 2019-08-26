@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:microchart="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             x:Class="Convert.Views.Statistik">
+    <ScrollView>
+        <StackLayout BackgroundColor="wheat">
+            <Label Text="Line Chart" FontSize="14" FontAttributes="Bold" TextColor="Black"/>
+            <microchart:ChartView x:Name="charView" Chart="{Binding Chart}" HeightRequest="200"/>
+            <Label Text="Bar Chart" FontSize="14" FontAttributes="Bold" TextColor="Black"/>
+            <microchart:ChartView x:Name="charView2" Chart="{Binding Chart}" HeightRequest="200"/>
+            <Label Text="Point Chart" FontSize="14" FontAttributes="Bold" TextColor="Black"/>
+            <microchart:ChartView x:Name="charView3" Chart="{Binding Chart}" HeightRequest="200"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
